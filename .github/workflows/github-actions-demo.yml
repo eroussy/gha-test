@@ -9,4 +9,4 @@ jobs:
     if: github.event.review.state == 'approved'
     runs-on: self-hosted
     steps:
-      - run: /home/eroussy/tmp/actions-runner/cukinia cukinia.conf.sample
+      - run: ../../cukinia ../../cukinia.conf.sample
