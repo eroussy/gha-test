@@ -9,4 +9,4 @@ jobs:
     if: github.event.review.state == 'approved'
     runs-on: self-hosted
     steps:
-      - run: ./script
+      - run: /home/eroussy/tmp/actions-runner/script
