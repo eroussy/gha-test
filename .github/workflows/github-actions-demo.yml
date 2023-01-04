@@ -9,4 +9,4 @@ jobs:
     if: github.event.review.state == 'approved'
     runs-on: self-hosted
     steps:
-      - run: echo "This PR was approved"
+      - run: ./script
