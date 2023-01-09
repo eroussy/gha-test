@@ -1,9 +1,8 @@
 name: GitHub Actions Demo
 
 on:
-  pull_request_review:
-    types: [submitted]
-
+  pull_request:
+    types: [opened, reopened]
 jobs:
   approved:
     runs-on: self-hosted
