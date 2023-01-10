@@ -7,4 +7,4 @@ jobs:
   approved:
     runs-on: self-hosted
     steps:
-      - run: /home/eroussy/tmp/actions-runner/cukinia /home/eroussy/tmp/actions-runner/cukinia.conf.sample
+      - run: echo ${GITHUB_REF}
