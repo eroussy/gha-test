@@ -3,7 +3,7 @@ name: GitHub Actions Demo
 env:
   PR_N: $(echo $GITHUB_REF | cut -d '/' -f 3)
   TIME: $(date +%Hh%Mm%S)
-  CI_DIR: '/tmp/seapath-ci-${PR_N}-${TIME}'
+  CI_DIR: /tmp/seapath-ci-${PR_N}-${TIME}
 
 on: [push]
 
@@ -18,3 +18,5 @@ jobs:
         run: echo bip boup
       - name: Give link
         run: echo $CI_DIR
+             echo $PR_N
+             echo $TIME
