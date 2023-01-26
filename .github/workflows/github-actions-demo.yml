@@ -6,6 +6,6 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: set Dir
-        run: CI_DIR=${GITHUB_REF_NAME}_${GITHUB_RUN_ATTEMPT}; mkdir $CI_DIR
+        run: CI_DIR=/tmp/seapath-ci-${GITHUB_REF_NAME}_${GITHUB_RUN_ATTEMPT}; mkdir $CI_DIR
       - name: Give link
         run: CI_DIR=${GITHUB_REF_NAME}_${GITHUB_RUN_ATTEMPT}; echo $CI_DIR
