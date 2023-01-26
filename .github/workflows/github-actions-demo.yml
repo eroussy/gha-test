@@ -7,7 +7,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Download ci
-        run: CI_DIR=/tmp/seapath-ci-${RANDOM};
+        run: export CI_DIR=/tmp/seapath-ci-${RANDOM};
              mkdir $CI_DIR; cd $CI_DIR;
              git clone --depth 1 -b main https://github.com/seapath/ci ci
       - name: Run ci
