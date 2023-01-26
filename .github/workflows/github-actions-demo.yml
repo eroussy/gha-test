@@ -1,5 +1,10 @@
 name: GitHub Actions Demo
 
+env:
+  PR_N: $(echo $GITHUB_REF | cut -d '/' -f 3)
+  TIME: $(date +%Hh%Mm%S)
+  CI_DIR: '/tmp/seapath-ci-${PR_N}-${TIME}'
+
 on: [push]
 
 jobs:
@@ -7,8 +12,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Download ci
-        run: export CI_DIR=/tmp/seapath-ci-${RANDOM};
-             mkdir $CI_DIR; cd $CI_DIR;
+        run: mkdir $CI_DIR; cd $CI_DIR;
              git clone --depth 1 -b main https://github.com/seapath/ci ci
       - name: Run ci
         run: echo bip boup
