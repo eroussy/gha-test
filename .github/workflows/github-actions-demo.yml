@@ -3,7 +3,7 @@ name: GitHub Actions Demo
 env:
   PR_N: $(echo $GITHUB_REF | cut -d '/' -f 3)
   TIME: $(date +%Hh%Mm%S)
-  CI_DIR: /tmp/seapath-ci-$RANDOM
+  CI_DIR: /tmp/seapath-ci-${{GITHUB_REF_NAME}}
 
 on: [push]
 
