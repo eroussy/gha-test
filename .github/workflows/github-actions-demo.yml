@@ -1,8 +1,4 @@
 name: GitHub Actions Demo
-
-env:
-  CI_DIR: /tmp/seapath-ci-${{ env.GITHUB_REF }}
-
 on: [push]
 
 jobs:
