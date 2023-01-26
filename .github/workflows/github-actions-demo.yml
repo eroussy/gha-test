@@ -1,10 +1,16 @@
 name: GitHub Actions Demo
 
-on:
-  pull_request:
-    types: [opened, reopened, edited]
+on: [push]
+
 jobs:
   approved:
     runs-on: self-hosted
     steps:
-      - run: echo ${GITHUB_REF}
+      - name: Download ci
+        run: CI_DIR=/tmp/seapath-ci-${RANDOM};
+             mkdir $CI_DIR; cd $CI_DIR;
+             git clone --depth 1 -b main https://github.com/seapath/ci ci
+      - name: Run ci
+        run: echo bip boup
+      - name: Give link
+        run: echo $CI_DIR
