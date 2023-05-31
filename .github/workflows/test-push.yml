@@ -1,4 +1,4 @@
-name: cron job demo
+name: tests push
 
 on:
   push:
