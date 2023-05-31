@@ -3,7 +3,7 @@ name: cron job demo
 
 on:
   schedule:
-    - cron: '3 12 * * *'
+    - cron: '15 12 * * *'
 
 
 jobs:
