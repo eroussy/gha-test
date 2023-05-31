@@ -2,8 +2,7 @@ name: cron job demo
 
 on:
   schedule:
-    - cron: '20 * * * *'
-    - cron: '30 * * * *'
+    - cron: '0/10 * * * *'
 
 jobs:
   test_schedule:
