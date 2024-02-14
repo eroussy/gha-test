@@ -3,10 +3,11 @@ name: cron job demo
 on:
   schedule:
     - cron: '35 * * * *'
+  workflow_call:
 
 jobs:
   test_schedule:
     runs-on: ubuntu-latest
     steps:
       - name: Every time
-        run: echo "This step will always run"
+        run: echo "This step will always run cron"

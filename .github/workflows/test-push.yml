@@ -4,8 +4,5 @@ on:
   push:
 
 jobs:
-  test_schedule:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Every time
-        run: echo "This step will always run"
+  call-workflow-passing-data:
+    uses: .github/workflows/cron-job-demo.yml@main
